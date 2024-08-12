@@ -1,0 +1,91 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}
+habeeb's-portfolio-about
+{% endblock %}
+{% block content %}
+<div class="container text-center mb-3">
+  <div class="container-fluid text-center">
+    <h1 class="text-light fw-bolder m-1">
+      About Me
+    </h1>
+  </div>  
+</div>
+    
+<div class="container">
+  <div class="row justify-content-center align-item-center">
+    <div class="col-10">
+      <h4 class="text-left text-warning fw-bold my-2 mx-4">
+        Who Am I?
+      </h4>
+      <div class="row">
+        <div class="container">
+          <ul class="text-light my-4">
+            <li>
+              <p>A computer analyst who's aim is to ease task through providing confidential and reliable 
+                programms.</p>
+            </li>
+            <li>
+              <p>An innocent researcher who focused on only people's problem solving.</p>
+            </li>
+            <li>
+              <p>A professional programmer capable of manipulating best of algorithms.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-10">
+      <h4 class="text-left text-warning fw-bold my-2 mx-4">
+          Im Capable of...
+      </h4>
+      <div class="row">
+        <div class="container">
+          <ul class="text-light my-4">
+            <li>
+              <p>Web Applications Design With Python Basically Flask and Django.</p>
+            </li>
+            <li>
+              <p>Database Integration in Python, i.e Sqlalchemy.</p>
+            </li>
+            <li>
+              <p>Simple Web Design, Portfolios, E-commerce and Much Much More.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-10">
+      <h4 class="text-left  text-warning fw-bold my-2 mx-4">
+          My Professions...
+      </h4>
+      <div class="row">
+        <div class="container">
+          <ul class="text-light my-4">
+            <li>
+              <p>On-going Four Year Bachelor of Degree Programm in Computer Science.</p>
+            </li>
+            <li>
+              <p>Variety of Udemy Certifications</p>
+            </li>
+            <li>
+              <p>Diplomer Certificate on Computing</p>
+            </li>
+            <li>
+              <p>Seven Year of Experience.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="text-light">
+    </div>
+    <div class="container text-center">
+      <a href="{% url 'home' %}">
+        <button type="button" class="btn btn-lg btn-success">
+          <span class="text-light fw-bold">Get Back</span>
+        </button>
+      </a>
+    </div>
+  </div>   
+  </div>
+{% endblock %}

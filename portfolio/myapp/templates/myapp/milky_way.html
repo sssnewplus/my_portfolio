@@ -1,0 +1,123 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}
+habeeb's-portfolio-milky-way
+{% endblock %}
+{% block content %}
+<div class="container text-center mb-3">
+  <div class="container-fluid text-center">
+    <h1 class="text-light fw-bolder m-1">
+      The Milky Way
+    </h1>
+  </div>  
+</div>
+    
+<div class="container">
+  <div class="row justify-content-center align-item-center">
+    <div class="col-10">
+      <p class="lead text-left text-warning fw-bold my-2 mx-4">
+          
+      </p>
+      <div class="row">
+        <div class="container">
+          <p class="lead text-center text-warning">
+            <span>You wanted to join, participate and become expert in python back-end engineering?</span>
+            <br>
+            <span>feel free to fill the following form and dive right in to the field.</span>
+            <br>
+            <span>we collaborate, engage and coded out for fun &#128512;</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="row">
+        <div class="container text-light col-lg-10">
+          <form method="POST" action="{% url 'milky_way' %}">
+            {% csrf_token %}
+            <h2 class="my-3 text-center fw-bold">Mentoring Information Form</h2> 
+            <div class="form-group mb-3">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="enter your fullname" required>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="enter valid email address" required>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="enter valid phone number" required>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="goals">Goals and Expectations:</label>
+                <textarea class="form-control" id="goals" name="goals" rows="4" placeholder="what do you expect?" required></textarea>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="background">Background and Experience:</label>
+                <textarea class="form-control" id="background" name="background" rows="4" placeholder="your current experience" ></textarea>
+            </div>
+            <div class="form-group mb-3">
+                <label for="weaknesses">Areas for Improvement:</label>
+                <textarea class="form-control" id="weaknesses" name="weaknesses" rows="4" placeholder="if you have any weakness specify"></textarea>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="learning-style">Learning Style:</label>
+                <select class="form-control" id="learning-style" name="learning_style">
+                    <option value="hands-on">Hands-On</option>
+                    <option value="reading">Reading</option>
+                    <option value="listening">Listening</option>
+                    <option value="combination">Combination</option>
+                </select>
+            </div>
+            <div class="form-group mb-3">
+                <label for="communication">Preferred Communication Method:</label>
+                <select class="form-control" id="communication" name="communication">
+                    <option value="meetings">Regular Meetings</option>
+                    <option value="email">Email</option>
+                    <option value="chat">Chat</option>
+                </select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="challenges">Challenges and Obstacles:</label>
+                <textarea class="form-control" id="challenges" name="challenges" rows="4" placeholder="specify anything that's stopping you"></textarea>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="feedback">Feedback and Support Needs:</label>
+                <textarea class="form-control" id="feedback" name="feedback" rows="4" placeholder="optional"></textarea>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="career">Career Aspirations:</label>
+                <textarea class="form-control" id="career" name="career" rows="4" placeholder="optional"></textarea>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="resources">Resource Accessibility:</label>
+                <textarea class="form-control" id="resources" name="resources" rows="4" placeholder="limit your access to resources, you have laptop, desktop or whatever, specify" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary mb-5">
+                <span class="fw-bold">Send via WhatsApp</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <a href="/">
+        <button type="button" class="btn btn-lg btn-success">
+          <span class="text-light fw-bold">Get Back</span>
+        </button>
+      </a>
+    </div>
+  </div>   
+  </div>
+{% endblock %}
